@@ -38,7 +38,7 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-[#D4AF37]/20 px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/files/57dc1ee4-87aa-483d-829b-c615b4034f3c.jpg" alt="Автоколесо" className="w-10 h-10 rounded-full" />
+          <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/bucket/b53f67fc-6c4f-4ad2-8a08-2d29d03f65ae.jpg" alt="Автоколесо" className="w-10 h-10 rounded-full" />
           <div>
             <span className="text-2xl font-bold tracking-tight text-[#D4AF37]">Автоколесо</span>
             <p className="text-[#D4AF37]/50 text-xs tracking-widest uppercase mt-0.5">Шиномонтаж · Орск</p>
@@ -52,7 +52,7 @@ const Index = () => {
 
       {/* Hero */}
       <section className="px-6 py-20 md:py-32 text-center border-b border-[#D4AF37]/10">
-        <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/files/57dc1ee4-87aa-483d-829b-c615b4034f3c.jpg" alt="Автоколесо логотип" className="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-8 border-2 border-[#D4AF37]/20" />
+        <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/bucket/b53f67fc-6c4f-4ad2-8a08-2d29d03f65ae.jpg" alt="Автоколесо логотип" className="w-44 h-44 md:w-64 md:h-64 rounded-full mx-auto mb-8" />
         <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-none mb-6">
           Автоколесо
         </h1>
