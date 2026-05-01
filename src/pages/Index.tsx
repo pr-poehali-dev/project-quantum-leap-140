@@ -40,7 +40,7 @@ const Index = () => {
         <div className="flex items-center gap-3">
           <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/bucket/b53f67fc-6c4f-4ad2-8a08-2d29d03f65ae.jpg" alt="Автоколесо" className="w-10 h-10 rounded-full" />
           <div>
-            <span className="text-2xl font-bold tracking-tight text-[#D4AF37]">Автоколесо</span>
+            <span className="text-2xl font-bold tracking-tight gold-shimmer">Автоколесо</span>
             <p className="text-[#D4AF37]/50 text-xs tracking-widest uppercase mt-0.5">Шиномонтаж · Орск</p>
           </div>
         </div>
@@ -53,8 +53,8 @@ const Index = () => {
       {/* Hero */}
       <section className="px-6 py-20 md:py-32 text-center border-b border-[#D4AF37]/10">
         <img src="https://cdn.poehali.dev/projects/584bb2bf-468a-430d-8c24-7dd1cca043aa/bucket/b53f67fc-6c4f-4ad2-8a08-2d29d03f65ae.jpg" alt="Автоколесо логотип" className="w-44 h-44 md:w-64 md:h-64 rounded-full mx-auto mb-8" />
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-none mb-6">
-          Автоколесо
+        <h1 className="text-6xl md:text-9xl font-bold tracking-tight leading-none mb-6 gold-shimmer">
+          АВТОКОЛЕСО
         </h1>
         <p className="text-[#b8963e] text-lg md:text-xl max-w-md mx-auto mb-10">
           Всё для ваших колёс — быстро и по делу. Цены уточняйте по телефону или в сообщениях.

@@ -94,3 +94,30 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes gold-shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #b8963e 0%,
+    #d4af37 25%,
+    #ffe87c 45%,
+    #fff5c0 50%,
+    #ffe87c 55%,
+    #d4af37 75%,
+    #b8963e 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shine 3s linear infinite;
+}
