@@ -38,7 +38,7 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-[#D4AF37]/20 px-6 py-5 flex items-center justify-between">
         <div>
-          <span className="text-2xl font-bold tracking-tight">Авто<span className="text-white">колесо</span></span>
+          <span className="text-2xl font-bold tracking-tight text-[#D4AF37]">Автоколесо</span>
           <p className="text-[#D4AF37]/50 text-xs tracking-widest uppercase mt-0.5">Шиномонтаж · Орск</p>
         </div>
         <a href={TEL_URL} className="flex items-center gap-2 text-[#D4AF37] hover:text-white transition-colors">
@@ -51,7 +51,7 @@ const Index = () => {
       <section className="px-6 py-20 md:py-32 text-center border-b border-[#D4AF37]/10">
         <p className="text-[#D4AF37]/50 tracking-[0.4em] uppercase text-xs mb-4">шиномонтаж</p>
         <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-none mb-6">
-          Авто<span className="text-white">колесо</span>
+          Автоколесо
         </h1>
         <p className="text-[#b8963e] text-lg md:text-xl max-w-md mx-auto mb-10">
           Всё для ваших колёс — быстро и по делу. Цены уточняйте по телефону или в сообщениях.
