@@ -170,6 +170,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Map */}
+      <section className="px-6 py-16 md:py-24 border-t border-[#D4AF37]/10">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">Как нас найти</h2>
+        <p className="text-[#D4AF37]/50 text-sm text-center mb-8">Орск, ул. Ленинского Комсомола, 4а</p>
+        <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-[#D4AF37]/20">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9E%D1%80%D1%81%D0%BA%2C+%D1%83%D0%BB.+%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D0%9A%D0%BE%D0%BC%D1%81%D0%BE%D0%BC%D0%BE%D0%BB%D0%B0%2C+4%D0%B0&z=16&l=map"
+            width="100%"
+            height="400"
+            style={{ border: 0, display: "block" }}
+            allowFullScreen
+            loading="lazy"
+            title="Карта"
+          />
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-[#D4AF37]/10 px-6 py-6 text-center">
         <p className="text-[#D4AF37]/30 text-sm">© 2025 Автоколесо · Орск</p>
