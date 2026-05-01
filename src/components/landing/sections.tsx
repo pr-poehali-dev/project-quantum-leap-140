@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 export const sections = [
   {
     id: 'hero',
-    subtitle: <Badge variant="outline" className="text-[#FF4D00] border-[#FF4D00]">Работаем без выходных</Badge>,
+    subtitle: <Badge variant="outline" className="text-[#D4AF37] border-[#D4AF37]">Работаем без выходных</Badge>,
     title: "Шиномонтаж за 30 минут.",
     showButton: true,
     buttonText: 'Записаться'
