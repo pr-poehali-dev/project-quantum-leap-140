@@ -1,8 +1,10 @@
+import { useState } from "react"
 import Icon from "@/components/ui/icon"
 
 const PHONE = "89058451101"
 const TEL_URL = `tel:+7${PHONE.slice(1)}`
-const WHATSAPP_URL = `https://wa.me/7${PHONE.slice(1)}`
+// Макс — отправка через sms: ссылка открывает приложение для SMS/звонка
+const MAX_URL = `https://max.ru/chat/${PHONE}`
 
 const services = [
   { icon: "CircleDot", label: "Балансировка колёс" },
@@ -14,6 +16,22 @@ const services = [
 ]
 
 const Index = () => {
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [service, setService] = useState("")
+  const [sent, setSent] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const text = `Заявка с сайта!%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AУслуга: ${encodeURIComponent(service || "не указана")}`
+    window.open(`https://max.ru/chat/${PHONE}?text=${text}`, "_blank")
+    setSent(true)
+    setName("")
+    setPhone("")
+    setService("")
+    setTimeout(() => setSent(false), 4000)
+  }
+
   return (
     <div className="min-h-screen bg-black text-[#D4AF37] font-sans">
 
@@ -45,10 +63,10 @@ const Index = () => {
               Позвонить
             </button>
           </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a href="#booking">
             <button className="flex items-center gap-2 border border-[#D4AF37] text-[#D4AF37] font-semibold px-6 py-3 rounded hover:bg-[#D4AF37] hover:text-black transition-colors">
-              <Icon name="MessageCircle" size={18} />
-              WhatsApp / Макс
+              <Icon name="ClipboardList" size={18} />
+              Записаться
             </button>
           </a>
         </div>
@@ -66,6 +84,50 @@ const Index = () => {
           ))}
         </div>
         <p className="text-center text-[#D4AF37]/40 text-sm mt-8">Цены — уточняйте по телефону или в сообщениях</p>
+      </section>
+
+      {/* Booking Form */}
+      <section id="booking" className="px-6 py-16 md:py-24 border-b border-[#D4AF37]/10">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">Записаться</h2>
+        <p className="text-[#D4AF37]/50 text-sm text-center mb-10">Заявка придёт в Макс — ответим быстро</p>
+        <form onSubmit={handleSubmit} className="max-w-sm mx-auto flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Ваше имя"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+            className="bg-transparent border border-[#D4AF37]/30 text-[#D4AF37] placeholder-[#D4AF37]/30 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-colors"
+          />
+          <input
+            type="tel"
+            placeholder="Ваш телефон"
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            required
+            className="bg-transparent border border-[#D4AF37]/30 text-[#D4AF37] placeholder-[#D4AF37]/30 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-colors"
+          />
+          <select
+            value={service}
+            onChange={e => setService(e.target.value)}
+            className="bg-black border border-[#D4AF37]/30 text-[#D4AF37] rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-colors"
+          >
+            <option value="">Выберите услугу (необязательно)</option>
+            {services.map(s => (
+              <option key={s.label} value={s.label}>{s.label}</option>
+            ))}
+          </select>
+          <button
+            type="submit"
+            className="flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#b8963e] transition-colors mt-2"
+          >
+            <Icon name="Send" size={18} />
+            {sent ? "Открываем Макс..." : "Отправить заявку"}
+          </button>
+          {sent && (
+            <p className="text-center text-[#D4AF37]/60 text-sm">Заявка отправлена в Макс!</p>
+          )}
+        </form>
       </section>
 
       {/* Contacts */}
