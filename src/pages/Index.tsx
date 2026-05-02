@@ -49,8 +49,8 @@ const Index = () => {
 
       {/* Hero */}
       <section className="px-6 py-20 md:py-32 text-center border-b border-[#D4AF37]/10">
-        <h1 className="text-6xl md:text-9xl font-bold tracking-tight leading-none mb-6 gold-shimmer">
-          АВТОКОЛЕСО
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-none mb-6 gold-shimmer">
+          Автоколесо
         </h1>
         <p className="text-[#b8963e] text-lg md:text-xl max-w-md mx-auto mb-10">
           Всё для ваших колёс — быстро и по делу. Цены уточняйте по телефону или в сообщениях.
